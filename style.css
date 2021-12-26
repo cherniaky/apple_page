@@ -1,9 +1,15 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 /* navbar */
 .navbar {
     position: absolute;
     top: 80px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 2;
 }
 
 .navbar ul {
@@ -14,11 +20,10 @@
     border-radius: 3px;
 }
 .nav-li {
-
     height: 34px;
     cursor: pointer;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     min-width: min-content;
     width: 102.63px;
     font-size: 12px;
@@ -40,7 +45,6 @@
     );
 }
 
-
 .navbar ul li:hover:nth-child(1),
 .navbar ul li:hover:nth-child(2),
 .navbar ul li:hover:nth-child(3),
@@ -49,21 +53,21 @@
 .navbar ul li:hover:nth-child(6),
 .navbar ul li:hover:nth-child(7),
 .navbar ul li:hover:nth-child(8) {
-  background: rgb(93, 93, 93);
-  background: linear-gradient(
-    180deg,
-    rgba(93, 93, 93, 1) 0%,
-    rgba(76, 76, 76, 1) 25%,
-    rgba(69, 69, 69, 1) 50%,
-    rgba(56, 56, 56, 1) 51%,
-    rgba(64, 64, 64, 1) 75%,
-    rgba(85, 85, 85, 1) 100%
-  );
+    background: rgb(93, 93, 93);
+    background: linear-gradient(
+        180deg,
+        rgba(93, 93, 93, 1) 0%,
+        rgba(76, 76, 76, 1) 25%,
+        rgba(69, 69, 69, 1) 50%,
+        rgba(56, 56, 56, 1) 51%,
+        rgba(64, 64, 64, 1) 75%,
+        rgba(85, 85, 85, 1) 100%
+    );
 }
 
-.nav-li-search{
+.nav-li-search {
     min-width: 132px;
-    width: fit-content  ;
+    width: fit-content;
 }
 .search-svg {
     width: 15px;
@@ -72,43 +76,153 @@
     z-index: 2;
     top: 20%;
     left: 4px;
-     transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
     /* fill: black;
     left: 17px; */
 }
-#search-input{
+#search-input {
     position: relative;
 }
 
-#search{
+#search {
     border-width: 0.5px;
     color: white;
-  background: rgb(138, 138, 138);
-  background: linear-gradient(
-    180deg,
-    rgba(138, 138, 138, 1) 0%,
-    rgba(131, 131, 131, 1) 25%,
-    rgba(127, 127, 127, 1) 50%,
-    rgba(110, 110, 110, 1) 51%,
-    rgba(112, 112, 112, 1) 75%,
-    rgba(118, 118, 118, 1) 100%
-  );
+    background: rgb(138, 138, 138);
+    background: linear-gradient(
+        180deg,
+        rgba(138, 138, 138, 1) 0%,
+        rgba(131, 131, 131, 1) 25%,
+        rgba(127, 127, 127, 1) 50%,
+        rgba(110, 110, 110, 1) 51%,
+        rgba(112, 112, 112, 1) 75%,
+        rgba(118, 118, 118, 1) 100%
+    );
     width: 106px;
     height: 19px;
-     outline: none;
+    outline: none;
     padding: 2px 18px 1px 22px;
     border-radius: 12px;
     transition: ease-out 0.3s;
 }
 
-#search:focus{
+#search:focus {
     background: white;
     width: 160px;
     margin: 0 13px;
     color: black;
 }
 
-#search:focus + .search-svg{
+#search:focus + .search-svg {
     fill: black;
     left: 17px;
+}
+/* MAIN */
+.billboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+}
+.your-verse {
+    width: 1440px;
+    background: url(https://web.archive.org/web/20140301004302im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg)
+        50% 100% no-repeat;
+    background-size: 1440px 1315px;
+}
+.hero {
+    /* position: absolute;
+    top: 0; */
+    height: 538px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 220px;
+}
+
+.full {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+}
+
+.header {
+    margin-top: 90px;
+    padding: 50px 0;
+    background: url(https://web.archive.org/web/20140301004302im_/http://images.apple.com/v/home/as/images/your_verse_scrim.png)
+        0 50% repeat-x;
+    background-size: 25px 335px;
+}
+.center {
+    overflow: hidden;
+    height: 30px;
+}
+.center a {
+    overflow: hidden;
+    height: 40px;
+}
+.link {
+    position: relative;
+}
+.link:hover {
+    bottom: 32px;
+}
+#promos {
+    align-self: center;
+    width: 1440px;
+    overflow: hidden;
+}
+#promos ul {
+    display: flex;
+    list-style: none;
+}
+#homefooter {
+    align-self: center;
+}
+.wrapper {
+    margin: 20px 0;
+    display: flex;
+    font-size: 0.65rem;
+    color: lightslategray;
+}
+.wrapper a {
+    color: rgb(40, 157, 196);
+}
+.wrapper a:hover{
+    text-decoration: underline;
+}
+.wrapper ul {
+    list-style: none;
+    display: inline;
+    display: flex;
+}
+.p{
+    margin-bottom: 10px;
+}
+.wrapper li {
+    margin-right:5px;
+    padding-left:  5px;
+    border-left: 1px solid rgb(163, 163, 163);
+    height: fit-content;
+}
+li.first{
+    border: none;
+}
+.left {
+    margin-right: 20px;
+}
+.clear{
+    display: flex;
+}
+.piped {
+  display: inline;
+  width:150px;
+}
+.piped li{
+    display: inline;
 }
